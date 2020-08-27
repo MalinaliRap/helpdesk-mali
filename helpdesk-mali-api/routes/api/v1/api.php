@@ -15,11 +15,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::prefix('/user')->group( function () {
-    Route::get('/login', 'api\v1\PassportLoginController@login')->name('login');;
-    Route::post('/register', 'api\v1\PassportLoginController@register');
+    Route::get('/login', 'api\v1\login\PassportLoginController@login')->name('login');;
+    Route::post('/register', 'api\v1\login\PassportLoginController@register');
 
     Route::middleware('auth:api')->group(function () {
-        Route::get('logout', 'api\v1\PassportLoginController@logout');
+        Route::get('/logout', 'api\v1\login\PassportLoginController@logout');
     });
 
 });
