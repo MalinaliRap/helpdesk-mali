@@ -15,9 +15,6 @@ class CreatePersonTable extends Migration
     {
         Schema::create('person', function (Blueprint $table) {
             $table->id();
-            $table->string('per_name', 200);
-            $table->integer('per_status');
-            $table->string('per_position',200);
             $table->timestamps();
         });
     }
