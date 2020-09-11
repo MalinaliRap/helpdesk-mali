@@ -38,7 +38,7 @@ class PassportLoginController extends Controller
             return response(['message' => 'Credenciais Inválidas'], 401);
         }
 
-        $accessToken = auth()->user()->createToken('authToken')->accessToken;
+       $accessToken = auth()->user()->createToken('authToken')->accessToken;
 
         return response(['user' => auth()->user(), 'access_token' => $accessToken]);
 

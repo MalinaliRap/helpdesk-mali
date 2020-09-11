@@ -4,10 +4,10 @@
 namespace App\Managers;
 
 
-use App\Repositories\api\v1\ticket\ColorRepository;
+use App\Repositories\api\v1\person\SectorRepository;
 use Freelabois\LaravelQuickstart\Extendables\ManipulationManager;
 
-class ColorManager extends ManipulationManager
+class SectorManager extends ManipulationManager
 {
 
     protected $validation = [
@@ -16,11 +16,11 @@ class ColorManager extends ManipulationManager
     ];
 
     /**
-     * @var ColorRepository
+     * @var SectorRepository
      */
     protected $repository;
 
-    public function __construct(ColorRepository $repository)
+    public function __construct(SectorRepository $repository)
     {
         $this->repository = $repository;
     }

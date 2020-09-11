@@ -23,3 +23,9 @@ Route::prefix('/user')->group( function () {
     });
 
 });
+
+Route::middleware('auth:api')->group(function () {
+    Route::apiResource('color', 'api\v1\ticket\ColorController');
+    Route::apiResource('sector', 'api\v1\person\SectorController');
+    Route::apiResource('person', 'api\v1\person\PersonController');
+});
